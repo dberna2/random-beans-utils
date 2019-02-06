@@ -134,3 +134,54 @@ public void generateObjectByClassReferenceTest() throws Exception {
 
 NOTE: The method `getListByClassReference` accepts as a second parameter the number of items we want to generate, in this case and generate different objects in each item <3
 
+## Generate custom beans
+
+One of the great advantages of this library, is that it gives us the possibility to indicate how we want to generate information about our objects.
+
+For this we can do it in two ways: programmatically or through annotations
+
+## Programmatically
+
+In this example we will continue with our Car class, where we see that we indicate for each tribute a `Randomizer` that will generate the data of face attribute
+
+```
+    public static EnhancedRandomBuilder buildEngineRandomize(EnhancedRandomBuilder randomBuilder) {
+        randomBuilder.randomize(FieldDefinitionBuilder.field().named("id").ofType(String.class).inClass(Engine.class).get(), new EngineIdRandomizer());
+        randomBuilder.randomize(FieldDefinitionBuilder.field().named("type").ofType(String.class).inClass(Engine.class).get(), new EngineTypeRandomizer());
+        randomBuilder.randomize(FieldDefinitionBuilder.field().named("horsePower").ofType(String.class).inClass(Engine.class).get(), new EngineHorsePowerRandomizer());
+        randomBuilder.randomize(FieldDefinitionBuilder.field().named("brand").ofType(String.class).inClass(Engine.class).get(), new EngineBrandRandomizer());
+        return randomBuilder;
+    }
+```
+
+For the horsePower attribute, we have the `Randomizer` `EngineHorsePowerRandomizer`, which is built in the following way:
+```
+public class EngineHorsePowerRandomizer implements Randomizer<Integer> {
+
+    List<Integer> horsePowerList  = Arrays.asList(1000, 1500, 1800);
+    
+    @Override
+    public Integer getRandomValue() {
+        return horsePowerList.get(new Random().nextInt(horsePowerList.size()));
+    }
+}
+```
+
+## Annotation
+
+To generate our data with annotations is much simpler, the only thing we must do is write down the attribute that we want to have specific data with the annotation `@Randomizer`
+
+```
+  public class Car {
+  
+      @Randomizer(CarColorRandomizer.class)
+      private String color;
+      @Randomizer(CarBrandRandomizer.class)
+      private String brand;
+      @Randomizer(CarEngineRandomizer.class)
+      private Engine engine;
+  }
+```
+Classes `CarColorRandomizer`, `CarBrandRandomizer`, `CarEngineRandomizer`  were created as the previous example of the class `EngineHorsePowerRandomizer`
+
+
