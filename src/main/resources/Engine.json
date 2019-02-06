@@ -1,0 +1,38 @@
+[
+  {
+    "id": "be9766bb-cf07-4f8d-b0d9-fa9e74fc6e75",
+    "type": "EXPLOSION",
+    "horsePower": 200,
+    "brand": "Mazda"
+  },
+  {
+    "id": "32679972-1e04-4a60-8957-939d90ba8a50",
+    "type": "COMBUSTION",
+    "horsePower": 200,
+    "brand": "BMW"
+  },
+  {
+    "id": "f3a03df6-4620-42a7-a671-0385a976187b",
+    "type": "PISTON",
+    "horsePower": 800,
+    "brand": "BMW"
+  },
+  {
+    "id": "c34c80fd-9b36-4dc3-9e83-38ce9e8ad9a9",
+    "type": "COMBUSTION",
+    "horsePower": 400,
+    "brand": "Jeep"
+  },
+  {
+    "id": "b757cdaa-5db1-42d6-9f3a-cf8614574bc9",
+    "type": "EXPLOSION",
+    "horsePower": 300,
+    "brand": "Honda"
+  },
+  {
+    "id": "28016d6d-6328-4801-8d16-8463c09a8afc",
+    "type": "PISTON",
+    "horsePower": 200,
+    "brand": "BMW"
+  }
+]

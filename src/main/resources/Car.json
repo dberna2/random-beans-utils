@@ -1,0 +1,62 @@
+[
+  {
+    "color": "Red",
+    "brand": "Mazda",
+    "engine": {
+      "id": "",
+      "type": "COMBUSTION",
+      "horsePower": 200,
+      "brand": "Mazda"
+    }
+  },
+  {
+    "color": "Blue",
+    "brand": "A200",
+    "engine": {
+      "id": "",
+      "type": "COMBUSTION",
+      "horsePower": 200,
+      "brand": "BMW"
+    }
+  },
+  {
+    "color": "Orange",
+    "brand": "Ferrari",
+    "engine": {
+      "id": "",
+      "type": "COMBUSTION",
+      "horsePower": 800,
+      "brand": "BMW"
+    }
+  },
+  {
+    "color": "Black",
+    "brand": "Jeep",
+    "engine": {
+      "id": "",
+      "type": "COMBUSTION",
+      "horsePower": 400,
+      "brand": "Jeep"
+    }
+  },
+  {
+    "color": "Purple",
+    "brand": "Honda",
+    "engine": {
+      "id": "",
+      "type": "COMBUSTION",
+      "horsePower": 300,
+      "brand": "Honda"
+    }
+  },
+  {
+    "color": "Red",
+    "brand": "Mazda",
+    "engine": {
+      "id": "",
+      "type": "COMBUSTION",
+      "horsePower": 200,
+      "brand": "BMW"
+    }
+  }
+]
